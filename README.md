@@ -96,6 +96,11 @@ Everything else will be provided.
         <td>Piezo Buzzer</td>
         <td>A small speaker, used to play tones</td>
     </tr>
+    <tr>
+        <td><img src="images/kits/jumper-wires.jpg" width="200" /></td>
+        <td>Jumper wires</td>
+        <td>Wires used to connect different parts of the breadboard to one another</td>
+    </tr>
 </table>
 
 ## Getting Started
@@ -132,6 +137,8 @@ npm start
 ### Is This Thing On?
 
 In this lesson, your objective is to make the built-in LED on the arduino blink. You will be using the [Johnny-Five](http://johnny-five.io/) library to do this. The built-in LED on the arduino is connected to pin 13. 
+
+![Blinking LED](images/diagrams/ex1-wiring.png)
 
 *Cheat codes:* You can use the [blink](http://johnny-five.io/api/led/#blink) method to make the LED blink.
 
