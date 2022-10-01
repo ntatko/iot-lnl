@@ -33,8 +33,8 @@ You will need to have [NodeJS](https://nodejs.org/en/) and [Git](https://git-scm
 Clone the repository
 
 ```
-git clone
-cd 1904Labs-IoT-LunchAndLearn
+git clone git@github.com:ntatko/iot-lnl.git
+cd iot-lnl
 ```
 
 Install the dependencies
@@ -73,6 +73,8 @@ In this lesson, you will learn how to read the state of a button, and how to use
 
 Objective: Turn one LED on when the button is pressed, and have the other LED turn off when the button is pressed. Have them reverse when the button is released.
 
+![Wiring diagram with potentiometer](images/diagrams/ex2-wiring.png)
+
 *Cheat codes:* You can use the [`on`](http://johnny-five.io/api/led/#on) method to turn the LED on, and the [`off`](http://johnny-five.io/api/led/#off) method to turn the LED off. [`toggle`](http://johnny-five.io/api/led/#toggle) might also be interesting.
 
 **Answer key:** [`ex2-buttons_leds.js`](src/stages/ex2-buttons_leds.js)
@@ -89,6 +91,8 @@ In this lesson, you will learn how to read the state of a potentiometer, and how
 
 Objective: Make an LED's brightness change based on the position of the potentiometer. Use whatever scale you want, linear, logarithmic, etc. Go nuts!
 
+![Wiring diagram with potentiometer](images/diagrams/ex3-wiring.png)
+
 *Cheat codes:* You can use the [`brightness`](http://johnny-five.io/api/led/#brightness0255) method to set the brightness of the LED. The [`sensor`](http://johnny-five.io/api/sensor/) class is a good place to start using analog sensors. Be sure to use a pin that supports analog input - one preceded by an `'a'`.
 
 **Answer key:** [`ex3-analog_pwm.js`](src/stages/ex3-analog_pwm.js)
@@ -98,9 +102,3 @@ Or, if you just want to see the answer key in action:
 ```
 node src/stages/ex3-analog_pwm.js
 ```
-
-### INTERNET of Things
-
-In this lesson, you will learn how to connect your arduino to the internet, and send data to and from an API.
-
-Objective: Turn on and off an LED using a web API. I made an API for you to use [`]
