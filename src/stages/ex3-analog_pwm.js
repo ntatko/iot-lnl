@@ -40,7 +40,7 @@ board.on("ready", () => {
 
         // advanced mode
         // stays off for 1/2 of the time, then adjusts brightness for the other 1/2 of the time
-        if (sensor.value > 512) {
+        if (potentiometer.value > 512) {
             led4.brightness(Math.round((potentiometer.value - 512) / 2) - 1);
         } else {
             led4.off();

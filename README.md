@@ -20,7 +20,83 @@ Everything else will be provided.
 
 ## The Kits
 
-
+<table>
+    <tr>
+        <td><img src="images/kits/breadboard.jpg" width="200" /></td>
+        <td>Breadboard</td>
+        <td>Keeps all the components in place</td>
+    </tr>
+    <tr>
+        <td><img src="images/kits/arduino.jpg" width="200" /></td>
+        <td>Arduino</td>
+        <td>Our brains</td>
+    </tr>
+    <tr>
+        <td><img src="images/kits/led-white.jpg" width="200" /></td>
+        <td>White LED</td>
+        <td>Our white light - needs a 51ohm resistor</td>
+    </tr>
+    <tr>
+        <td><img src="images/kits/led-red.jpg" width="200" /></td>
+        <td>Red LED</td>
+        <td>Our red light - needs a 151ohm resistor</td>
+    </tr>
+    <tr>
+        <td><img src="images/kits/led-green.jpg" width="200" /></td>
+        <td>Green LED</td>
+        <td>Our green light - needs a 151ohm resistor</td>
+    </tr>
+    <tr>
+        <td><img src="images/kits/led-blue.jpg" width="200" /></td>
+        <td>Blue LED</td>
+        <td>Our blue light - needs a 51ohm resistor</td>
+    </tr>
+    <tr>
+        <td><img src="images/kits/led-yellow.jpg" width="200" /></td>
+        <td>Yellow LED</td>
+        <td>Our blue light - needs a 151ohm resistor</td>
+    </tr>
+    <tr>
+        <td><img src="images/kits/buttons.jpg" width="200" /></td>
+        <td>Buttons</td>
+        <td>Our buttons, momentary switches</td>
+    </tr>
+    <tr>
+        <td><img src="images/kits/potentiometer.jpg" width="200" /></td>
+        <td>Potentiometer</td>
+        <td>A rotating sensor, used to detect rotation</td>
+    </tr>
+    <tr>
+        <td><img src="images/kits/51ohm-resistors.jpg" width="200" /></td>
+        <td>51 Ohm Resistors</td>
+        <td>Resistors that we will use for blue and white LEDs</td>
+    </tr>
+    <tr>
+        <td><img src="images/kits/151ohm-resistors.jpg" width="200" /></td>
+        <td>151 Ohm Resistors</td>
+        <td>Resistors that we will use for red, green, and yellow LEDs</td>
+    </tr>
+    <tr>
+        <td><img src="images/kits/vibrating-motor.jpg" width="200" /></td>
+        <td>Vibrating Motor</td>
+        <td>Small DC motor used for making things vibrate</td>
+    </tr>
+    <tr>
+        <td><img src="images/kits/usb-c-cable.jpg" width="200" /></td>
+        <td>USB C cable</td>
+        <td>The cable we'll use to connect our arduino to our computer</td>
+    </tr>
+    <tr>
+        <td><img src="images/kits/servo.jpg" width="200" /></td>
+        <td>Servo</td>
+        <td>A 5v DC motor that is programmed to go to positions in degrees (1 - 180)</td>
+    </tr>
+    <tr>
+        <td><img src="images/kits/piezo.jpg" width="200" /></td>
+        <td>Piezo Buzzer</td>
+        <td>A small speaker, used to play tones</td>
+    </tr>
+</table>
 
 ## Getting Started
 
@@ -101,4 +177,40 @@ Or, if you just want to see the answer key in action:
 
 ```
 node src/stages/ex3-analog_pwm.js
+```
+
+### Make it Move
+
+In this lesson, you will learn how to control a servo motor.
+
+Objective: Make a servo motor move positions when a button is pressed.
+
+![Wiring diagram with servo](images/diagrams/ex4-wiring.png)
+
+*Cheat codes:* You can use the [`to`](http://johnny-five.io/api/servo/#to) method to move the servo to a specific position.
+
+**Answer key:** [`ex4-servo.js`](src/stages/ex4-servo.js)
+
+Or, if you just want to see the answer key in action:
+
+```
+node src/stages/ex4-servo.js
+```
+
+### Sing Along
+
+In this lesson, you will learn how to control a piezo buzzer.
+
+Objective: Make a piezo buzzer play a song when the program is run.
+
+![Wiring diagram with piezo](images/diagrams/ex5-wiring.png)
+
+*Cheat codes:* Checkout the [`Piezo`](http://johnny-five.io/api/piezo/#tone) class for using these speakers.
+
+**Answer key:** [`ex5-piezo.js`](src/stages/ex5-piezo.js)
+
+Or, if you just want to see the answer key in action:
+
+```
+node src/stages/ex5-piezo.js
 ```
