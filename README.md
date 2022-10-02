@@ -124,7 +124,7 @@ Install the dependencies
 npm install
 ```
 
-Then, plug in your arduino, using the provided USB cable. Make sure that the arduino is powered on (some lights will come on).
+Then, plug in your arduino using the provided USB cable. Make sure that the arduino is powered on (some lights will come on).
 
 ### Running
 
@@ -132,7 +132,13 @@ Then, plug in your arduino, using the provided USB cable. Make sure that the ard
 npm start
 ```
 
-## Lesson Plan
+### Editing
+
+Open the project in your editor of choice. I will be using [VSCode](https://code.visualstudio.com/). The file you will be editing is [`src/server.js`](/src/server.js). This runs whenever you run `npm start`.
+
+## Challenges
+
+Below, you'll find a series of challenges, each with a different level of difficulty. You can work on them in any order you want. You can also skip around. The goal is to get you to learn about the different components and how they work together.
 
 ### Is This Thing On?
 
@@ -220,4 +226,22 @@ Or, if you just want to see the answer key in action:
 
 ```
 node src/stages/ex5-piezo.js
+```
+
+### Where is the ISS?
+
+In this lesson, we're going to blend our hardware with the internet. We're going to use the [Open Notify API](http://open-notify.org/Open-Notify-API/ISS-Location-Now/) to get the current location of the International Space Station, and then use that data to control a servo motor and a Piezo speaker.
+
+Objective: Make a servo motor move to the current latitude of the ISS, and make a piezo buzzer play a tone whenever the ISS crosses the date line (when the longitude goes past 0, either from positive to negative, or negative to positive). 5 seconds should be a frequent enough interval.
+
+![Wiring diagram with piezo and servo](images/diagrams/ex6-wiring.png)
+
+*Cheat codes:* You don't get any this time. I like `node-fetch`, but you can use whatever you want.
+
+**Answer key:** [`ex6-iss.js`](src/stages/ex6-iss.js)
+
+Or, if you just want to see the answer key in action:
+
+```
+node src/stages/ex6-iss.js
 ```
