@@ -97,9 +97,14 @@ Everything else will be provided.
         <td>A small speaker, used to play tones</td>
     </tr>
     <tr>
-        <td><img src="images/kits/jumper-wires.jpg" width="200" /></td>
+        <td><img src="images/kits/jumper-cable.jpg" width="200" /></td>
         <td>Jumper wires</td>
         <td>Wires used to connect different parts of the breadboard to one another</td>
+    </tr>
+    <tr>
+        <td><img src="images/kits/dc-motor.jpg" width="200" /></td>
+        <td>DC Motor</td>
+        <td>A DC gear motor</td>
     </tr>
 </table>
 
@@ -140,7 +145,7 @@ Open the project in your editor of choice. I will be using [VSCode](https://code
 
 Below, you'll find a series of challenges, each with a different level of difficulty. You can work on them in any order you want. You can also skip around. The goal is to get you to learn about the different components and how they work together.
 
-### Is This Thing On?
+### 1: Is This Thing On?
 
 In this lesson, your objective is to make the built-in LED on the arduino blink. You will be using the [Johnny-Five](http://johnny-five.io/) library to do this. The built-in LED on the arduino is connected to pin 13. 
 
@@ -156,7 +161,7 @@ Or, if you just want to see the answer key in action:
 node src/stages/ex1-it_works.js
 ```
 
-### Push the Button
+### 2: Push the Button
 
 In this lesson, you will learn how to read the state of a button, and how to use that to control an LED.
 
@@ -174,7 +179,7 @@ Or, if you just want to see the answer key in action:
 node src/stages/ex2-buttons_leds.js
 ```
 
-### Spin the Dial
+### 3: Spin the Dial
 
 In this lesson, you will learn how to read the state of a potentiometer, and how to use that to control an LED.
 
@@ -192,7 +197,7 @@ Or, if you just want to see the answer key in action:
 node src/stages/ex3-analog_pwm.js
 ```
 
-### Make it Move
+### 4:  Make it Move
 
 In this lesson, you will learn how to control a servo motor.
 
@@ -210,7 +215,7 @@ Or, if you just want to see the answer key in action:
 node src/stages/ex4-servo.js
 ```
 
-### Sing Along
+### 5: Sing Along
 
 In this lesson, you will learn how to control a piezo buzzer.
 
@@ -228,7 +233,7 @@ Or, if you just want to see the answer key in action:
 node src/stages/ex5-piezo.js
 ```
 
-### Where is the ISS?
+### 6: Where is the ISS?
 
 In this lesson, we're going to blend our hardware with the internet. We're going to use the [Open Notify API](http://open-notify.org/Open-Notify-API/ISS-Location-Now/) to get the current location of the International Space Station, and then use that data to control a servo motor and a Piezo speaker.
 
@@ -244,4 +249,28 @@ Or, if you just want to see the answer key in action:
 
 ```
 node src/stages/ex6-iss.js
+```
+
+### 7: An Exchange of Data
+
+In this lesson, we're going to upload data to the internet. We're going to use an api that I made to store data from a potentiometer, then use that data to control a servo motor or an LED. I don't have a formal doc site written, but here you go:
+
+* `GET /leds/:id` - Get the current state of an LED
+* `GET /leds` - Get the current state of all LEDs
+* `POST /leds/:id` - Set the state of a new LED - Needs a json body of the form `{ "value": 0 }`
+* `PATCH /leds/:id` - Edit the state of a new LED - Needs a json body of the form `{ "value": 0 }`
+* `PUT /leds/:id` - Like a post - Needs a json body of the form `{ "value": 0 }`
+
+Objective: Choose a partner, and each of you will need to have a potentiometer and a servo motor. When you turn your potentiometer, their servo motor should move to the same position. When they turn their potentiometer, the other person's servo motor should move to the same position.
+
+![Wiring diagram with potentiometer and servo](images/diagrams/ex7-wiring.png)
+
+*Cheat codes:* You don't get any this time. Be inspired
+
+**Answer key:** [`ex7-exchange.js`](src/stages/ex7-exchange.js)
+
+Or, if you just want to see the answer key in action:
+
+```
+node src/stages/ex7-exchange.js
 ```
