@@ -141,6 +141,12 @@ npm start
 
 Open the project in your editor of choice. I will be using [VSCode](https://code.visualstudio.com/). The file you will be editing is [`src/server.js`](/src/server.js). This runs whenever you run `npm start`.
 
+### Slides
+
+I have some slides, if you want to get a quick overview of what we're talking about.
+
+[The slides](slides.pdf)
+
 ## Challenges
 
 Below, you'll find a series of challenges, each with a different level of difficulty. You can work on them in any order you want. You can also skip around. The goal is to get you to learn about the different components and how they work together.
