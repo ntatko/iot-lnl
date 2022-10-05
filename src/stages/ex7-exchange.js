@@ -35,9 +35,9 @@ board.on("ready", () => {
 
     setInterval(() => {
         fetch(`https://lnl.zipidy.org/leds/${id}`).then(r => r.json()).then(data => {
-            servo.to(data.value/4);
+            servo.to(data.value/5.689);
         });
-    }, 500);
+    }, 50);
    
 }).on("error", err => {
     console.log(err);
