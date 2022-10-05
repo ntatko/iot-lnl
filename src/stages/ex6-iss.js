@@ -2,6 +2,19 @@ const { Board, Piezo, Servo } = require("johnny-five");
 const fetch = require("node-fetch");
 const board = new Board();
 
+/**
+ * The International Space Station (ISS) is a space station that orbits the Earth. It is
+ * a joint project between the United States, Russia, Canada, and several other countries.
+ * 
+ * The ISS has a lot of sensors on it, and it sends data back to Earth. We're going to
+ * use the ISS API to get the current location of the ISS, and then use the servo to
+ * point the ISS in the direction of the ISS.
+ * 
+ * The ISS API is a REST API. It has a single endpoint, and it returns a JSON object.
+ * 
+ * We're going to use the `node-fetch` library to make a request to the API, and the `Servo`
+ * class from the johnny-five library to control the servo.
+ */
 board.on("ready", () => {
     const piezo = new Piezo(4);
     const servo = new Servo(5);
